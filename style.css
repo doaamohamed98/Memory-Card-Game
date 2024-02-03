@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url(../images/spongebob_squarepants_logo__2008_present__by_carlosoof10_dg2wi40.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color:#FF7300; */
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+   font-family: cursive;
+}
+
+
+.card{
+border-radius: 10px;
+border: 5px solid #898989c3;
+position: relative;
+background-color: #fcfcfc;
+transform-style: preserve-3d;
+transition: all .2s;
+cursor: pointer;
+
+}
+
+.card:active{
+    transform: scale(.95);
+    transition: all .2s;
+}
+
+.card.flip{
+transform: rotateY(180deg);
+
+}
+
+
+.container--Game{
+    width: 650px;
+    height: 650px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding: 10px;
+    perspective: 1000px;
+
+}
+
+.face,.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
+
+.back  {
+    transform: rotateY(180deg);  
+}
